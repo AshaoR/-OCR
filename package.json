@@ -1,0 +1,39 @@
+{
+  "name": "paddle-ocr-skill",
+  "version": "1.0.0",
+  "description": "基于 PaddleOCR AI Studio API 的中文文档 OCR 识别 CLI 工具，输出结构化 Markdown",
+  "keywords": [
+    "ocr",
+    "paddleocr",
+    "chinese",
+    "pdf",
+    "markdown",
+    "document",
+    "text-recognition",
+    "claude-code-skill"
+  ],
+  "homepage": "https://github.com/PaddlePaddle/PaddleOCR",
+  "bugs": {
+    "url": "https://github.com/PaddlePaddle/PaddleOCR/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR.git"
+  },
+  "license": "Apache-2.0",
+  "author": "",
+  "bin": {
+    "paddle-ocr": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "SKILL.md",
+    "scripts/"
+  ],
+  "scripts": {
+    "postinstall": "node -e \"console.log('\\n  请确保已安装 Python 3.8+ 和 requests 库。\\n  pip install requests\\n  并设置环境变量 PADDLE_OCR_TOKEN。\\n  Token 获取: https://aistudio.baidu.com\\n')\""
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
