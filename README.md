@@ -12,6 +12,16 @@
 </div>
 
 ---
+### 🤖 Claude Code Skill
+
+本工具同时是一个 Claude Code Skill，安装后在 Claude Code 中自动触发：
+
+- 拖拽/粘贴 PDF 或图片到对话中
+- 说"帮我识别这个文档""把这个转成文字"等
+- Skill 自动调用 `paddle_ocr.py --fuse`，输出 Markdown + 图片
+
+Skill 定义文件为仓库根目录的 `SKILL.md`，核心脚本与本 CLI 共用 `scripts/paddle_ocr.py`。
+
 
 ## ✨ 特性
 
@@ -65,6 +75,7 @@ paddle-ocr a.pdf b.jpg c.png --fuse -o ./out
 
 # 批量目录
 paddle-ocr ./扫描件/ --fuse -o ./out
+
 ```
 
 | 参数 | 说明 |
@@ -76,6 +87,7 @@ paddle-ocr ./扫描件/ --fuse -o ./out
 | `--merge` | 多页合并为一个 `.md` |
 | `--no-math` | 保留 LaTeX 数学公式原样 |
 | `--textline-orient` | 文本行方向校正 |
+
 
 ### 输出
 
