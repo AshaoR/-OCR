@@ -16,8 +16,7 @@
 
 本工具同时是一个 Claude Code Skill，安装后在 Claude Code 中自动触发：
 
-- 拖拽/粘贴 PDF 或图片到对话中
-- 说"帮我识别这个文档""把这个转成文字"等
+- 说"帮我识别这个文档""把这个转成文字"并提供文件路径
 - Skill 自动调用 `paddle_ocr.py --fuse`，输出 Markdown + 图片
 
 Skill 定义文件为仓库根目录的 `SKILL.md`，核心脚本与本 CLI 共用 `scripts/paddle_ocr.py`。
